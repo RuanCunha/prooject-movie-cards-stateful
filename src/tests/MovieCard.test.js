@@ -37,20 +37,20 @@ describe('Verifica o componente <MovieCard />', () => {
     expect(subtitle).toBeInTheDocument();
   });
 
-  it.skip('Renderize a sinopse do filme', () => {
+  it('Renderize a sinopse do filme', () => {
     const { getByText } = render(<MovieCard movie={ movie } />);
     const storyline = getByText('Movie Storyline 1');
     expect(storyline).toBeInTheDocument();
   });
 
-  it.skip('Renderize a avaliação do filme', () => {
+  it('Renderize a avaliação do filme', () => {
     const { getAllByTestId } = render(<MovieCard movie={ movie } />);
     const rating = getAllByTestId('rating');
 
     expect(rating).toHaveLength(1);
   });
 
-  it.skip('Renderize a avaliação do filme com o valor correto', () => {
+  it('Renderize a avaliação do filme com o valor correto', () => {
     const { getByTestId } = render(<MovieCard movie={ movie } />);
     const startRating = getByTestId('rating');
 
